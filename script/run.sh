@@ -1,3 +1,3 @@
 cd ..
-chmod 755 graldew
+chmod 755 gradlew
 ./gradlew clean bootRun
