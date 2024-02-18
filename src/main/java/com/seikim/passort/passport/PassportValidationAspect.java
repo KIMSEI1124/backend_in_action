@@ -1,5 +1,7 @@
 package com.seikim.passort.passport;
 
+import com.seikim.passort.exception.PassportErrorCode;
+import com.seikim.passort.exception.PassportException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
@@ -36,13 +38,13 @@ public class PassportValidationAspect {
 
     private void validateExpirationTime(LocalDateTime expirationTime) {
         if (LocalDateTime.now().isAfter(expirationTime)) {
-            throw new RuntimeException();
+            throw new PassportException(PassportErrorCode.EXPIRED_PASSPORT);
         }
     }
 
     private void validateAlreadyUsed(String id) {
         if (repository.existsById(id)) {
-            throw new RuntimeException();
+            throw new PassportException(PassportErrorCode.ALREADY_USED_PASSPORT);
         }
     }
 }
