@@ -1,4 +1,4 @@
-package com.seikim.passort.filter;
+package com.seikim.passort.passport;
 
 
 import java.lang.annotation.ElementType;

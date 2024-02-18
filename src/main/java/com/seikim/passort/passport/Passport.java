@@ -1,12 +1,14 @@
-package com.seikim.passort.filter;
+package com.seikim.passort.passport;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.ToString;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+@ToString
 @Getter
 public class Passport {
     @JsonProperty("passport_id")

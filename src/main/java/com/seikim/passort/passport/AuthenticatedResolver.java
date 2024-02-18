@@ -1,4 +1,4 @@
-package com.seikim.passort.filter;
+package com.seikim.passort.passport;
 
 import com.seikim.passort.exception.PassportErrorCode;
 import com.seikim.passort.exception.PassportException;

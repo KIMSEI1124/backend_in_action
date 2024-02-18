@@ -8,12 +8,16 @@ import com.seikim.passort.member.data.response.MemberTokenResponse;
 import com.seikim.passort.member.domain.Member;
 import com.seikim.passort.member.domain.MemberRepository;
 import com.seikim.passort.member.utils.MemberMapper;
+import com.seikim.passort.passport.Passport;
+import com.seikim.passort.passport.PassportValidation;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.NoSuchElementException;
 
+@Slf4j
 @Transactional(readOnly = true)
 @RequiredArgsConstructor
 @Service
@@ -34,5 +38,10 @@ public class MemberService {
                 .orElseThrow(() -> new NoSuchElementException("존재하지 않는 사용자입니다."));
         String token = tokenProvider.createToken(findMember);
         return new MemberTokenResponse(token);
+    }
+
+    @PassportValidation
+    public void doing(Passport passport) {
+        log.info("doing! : [{}]", passport);
     }
 }

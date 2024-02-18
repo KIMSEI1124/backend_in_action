@@ -17,3 +17,7 @@ Content-Type: application/json
 ###
 GET http://localhost:8080/passport
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIn0.5iLsE9L_wPAWXg_BnBXyjlIUufCkG62BmQHEgKl9vWc
+
+###
+GET http://localhost:8080/doing
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIn0.5iLsE9L_wPAWXg_BnBXyjlIUufCkG62BmQHEgKl9vWc

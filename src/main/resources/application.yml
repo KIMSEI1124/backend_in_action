@@ -1,2 +1,8 @@
+spring:
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
 jwt:
   secret-key: YWFzZGZrajtsYWRzamZrbGFkc2o7ZmxrYWRzaztsZmphZHNrbDtmamFkcztsa2ZrbDthZHNmamxrZGFzZmprbzthZHNqYmZsa2phZG5hZHNqaztmbGFkc2pua2ZqYWtkc2xtbmZqbmxrZHNuYmZqa2w7YWRzaGJmamtsZGFzamhmYmprZGFzamZobGtqYWRzaGpma2Fkc25qZmxrO2RuYXNjdmtsO2FkanNuamtsZm5oYWRzaztoZmJha2RzZmpuaGxrYWpkc2ZuaztsYWRzamZua2wnYWRzbmNma2o7bGFzbg==

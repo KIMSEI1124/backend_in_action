@@ -1,6 +1,6 @@
 package com.seikim.passort.config;
 
-import com.seikim.passort.filter.AuthenticatedResolver;
+import com.seikim.passort.passport.AuthenticatedResolver;
 import com.seikim.passort.jwt.TokenProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
