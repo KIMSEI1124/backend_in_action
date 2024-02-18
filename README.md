@@ -21,6 +21,10 @@
 
 ## Quick Starter
 
+> ⚠️ Warning
+> 
+> Quick Starter을 실행하기 위해서는 `docker-cli` 가 필요합니다.
+
 ```shell
 cd script && sh run.sh
 ```
