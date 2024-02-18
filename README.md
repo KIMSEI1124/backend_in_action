@@ -15,3 +15,7 @@
 - H2 DB
 
 ## Quick Starter
+
+```shell
+cd script && sh run.sh
+```
