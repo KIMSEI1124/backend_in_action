@@ -18,6 +18,7 @@
 - Spring Web
 - H2 DB
 - JWT 0.11.2
+- Redis
 
 ## Quick Starter
 
