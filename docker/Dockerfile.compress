@@ -1,4 +1,4 @@
-FROM openjdk:17
+FROM amazoncorretto:17-alpine
 LABEL MAINTAINER="KIMSEI <workju1124@gmail.com>"
 
 ARG JAR_FILE=../build/libs/*.jar
