@@ -3,6 +3,7 @@
 <img width="800" alt="redis-properties" src="https://github.com/KIMSEI1124/backend_in_action/assets/74192619/4f1bf8d0-0f1c-468a-a2b7-c5ca46397093" />
 
 [RedisLocalTest]()를 진행하던중 아래 사진과 같은 클래스를 확인하였습니다.
+
 해당 어노테이션이 궁금하여 `chat-gpt`에게 물어봤더니 다음과 같은 답변을 주었습니다.
 
 <img width="800" alt="chat-gpt" src="https://github.com/KIMSEI1124/backend_in_action/assets/74192619/544c65db-51e6-4373-a799-5430d876ea0b" />
@@ -21,7 +22,7 @@ public class CustomPropertiesApplication {
 }
 ```
 
-Comfiguration 을 모아둔 패키지가 있다면 좀 더 상세하게 
+Configuration 을 모아둔 패키지가 있다면 좀 더 상세하게 적어주면 좋을 것 같습니다. 
 
 ## 2. ConfigurationProperties
 
