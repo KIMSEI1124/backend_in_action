@@ -1,0 +1,13 @@
+package com.seikim.kopringbank
+
+import org.junit.jupiter.api.Test
+import org.springframework.boot.test.context.SpringBootTest
+
+@SpringBootTest
+class KopringBankApplicationTests {
+
+	@Test
+	fun contextLoads() {
+	}
+
+}
