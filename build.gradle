@@ -22,14 +22,7 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testAnnotationProcessor 'org.projectlombok:lombok'
-    // https://mvnrepository.com/artifact/it.ozimov/embedded-redis/0.7.3
-    testImplementation 'it.ozimov:embedded-redis:0.7.3'
-
-    configurations {
-        configureEach {
-            exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
-        }
-    }
+    testImplementation 'org.testcontainers:testcontainers'
 }
 
 tasks.named('test') {

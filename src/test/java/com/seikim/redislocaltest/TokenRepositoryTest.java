@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 @ActiveProfiles("test")
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -22,7 +22,7 @@ class TokenRepositoryTest {
 
         /* When */
         Token savedToken = tokenRepository.save(token);
-        System.out.println(savedToken);
+
         /* Then */
         assertThat(savedToken).isNotNull();
     }
