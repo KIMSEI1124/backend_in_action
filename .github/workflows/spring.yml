@@ -1,0 +1,23 @@
+name: Spring Test BOT 🤖
+
+on:
+  push:
+    branches:
+      - java/**
+
+jobs:
+  Backend_CI:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository 🚚
+        uses: actions/checkout@v3
+      - name: Setup JDK 17 🔨
+        uses: actions/setup-java@v3
+        with:
+          java-version: 17
+          distribution: temurin
+      - name: Create Test Setting 🔨
+        run: |
+          echo "chmod +x gradlew"
+      - name: Run Spring Boot Tests 🧪
+        run: ./gradlew clean test
