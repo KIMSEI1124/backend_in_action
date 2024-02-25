@@ -23,6 +23,7 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testAnnotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.testcontainers:testcontainers'
+    implementation 'com.github.codemonstur:embedded-redis:1.4.0'
 }
 
 tasks.named('test') {

@@ -5,7 +5,7 @@ import org.springframework.test.context.ActiveProfiles;
 import org.testcontainers.containers.GenericContainer;
 import org.testcontainers.utility.DockerImageName;
 
-@ActiveProfiles("test")
+@ActiveProfiles("docker-test")
 @Configuration
 public class RedisTestContainer {
     private static final String REDIS_DOCKER_IMAGE = "redis:latest";

@@ -8,9 +8,9 @@ import org.springframework.test.context.ActiveProfiles;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@ActiveProfiles("test")
+@ActiveProfiles("embedded-test")
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class TokenRepositoryTest {
+class TokenRepositoryEmbeddedTest {
     @Autowired
     private TokenRepository tokenRepository;
 
