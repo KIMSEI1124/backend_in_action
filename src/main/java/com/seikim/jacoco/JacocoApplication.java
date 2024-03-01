@@ -1,13 +1,13 @@
-package com.seikim.Jacobo;
+package com.seikim.jacoco;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class JacoboApplication {
+public class JacocoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(JacoboApplication.class, args);
+		SpringApplication.run(JacocoApplication.class, args);
 	}
 
 }

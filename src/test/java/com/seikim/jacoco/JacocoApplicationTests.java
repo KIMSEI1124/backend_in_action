@@ -1,13 +1,13 @@
-package com.seikim.Jacobo;
+package com.seikim.jacoco;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JacoboApplicationTests {
+class JacocoApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }
