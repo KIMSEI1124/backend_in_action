@@ -10,6 +10,7 @@ plugins {
 
 val jjwtVersion: String = "0.12.5"
 val embeddedRedisVersion: String = "1.4.0"
+val loggingVersion: String = "5.1.1"
 
 group = "com.seikim"
 version = "0.0.1-SNAPSHOT"
@@ -48,7 +49,7 @@ dependencies {
     runtimeOnly("io.jsonwebtoken:jjwt-impl:$jjwtVersion")
     runtimeOnly("io.jsonwebtoken:jjwt-jackson:$jjwtVersion")
 
-    implementation("io.github.oshai:kotlin-logging-jvm:5.1.1")
+    implementation("io.github.oshai:kotlin-logging-jvm:$loggingVersion")
 }
 
 tasks.withType<KotlinCompile> {

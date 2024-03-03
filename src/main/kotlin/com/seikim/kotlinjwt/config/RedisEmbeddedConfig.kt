@@ -34,7 +34,7 @@ class RedisEmbeddedConfig(
     }
 
     private fun isReadingRunning(): Boolean {
-        return isRunning(executeGrepProcessCommand(redisPort));
+        return isRunning(executeGrepProcessCommand(redisPort))
     }
 
     private fun findAvailablePort(): Int {
@@ -50,7 +50,7 @@ class RedisEmbeddedConfig(
     private fun executeGrepProcessCommand(port: Int): Process {
         val command = "netstat -nat | grep LISTEN|grep $port"
         val shell: Array<String> = arrayOf("/bin/sh", "-c", command)
-        return Runtime.getRuntime().exec(shell);
+        return Runtime.getRuntime().exec(shell)
     }
 
     private fun isRunning(process: Process): Boolean {
