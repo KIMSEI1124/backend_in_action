@@ -20,7 +20,7 @@ Backend 공부 관련 코드들을 기록합니다.
 
 ## Kotlin / Spring Boot
 
-| Title                                                                                     | Date                 | Description                              |
-|:------------------------------------------------------------------------------------------|:---------------------|:-----------------------------------------|
-| [Starter](https://github.com/KIMSEI1124/backend_in_action/tree/kotlin/springboot/starter) | 2024.03.01 - Forever | 코틀린을 공부하면서 처음 본 내용과 자바와 다른 점에 대해서 정리합니다. |
-| [Jwt Provider]()                                                                          | 2024.03.03           | 코틀린으로 JWT를 발급합니다.                        |
+| Title                                                                                              | Date                 | Description                              |
+|:---------------------------------------------------------------------------------------------------|:---------------------|:-----------------------------------------|
+| [Starter](https://github.com/KIMSEI1124/backend_in_action/tree/kotlin/springboot/starter)          | 2024.03.01 - Forever | 코틀린을 공부하면서 처음 본 내용과 자바와 다른 점에 대해서 정리합니다. |
+| [Jwt Provider](https://github.com/KIMSEI1124/backend_in_action/tree/kotlin/springboot/jwtprovider) | 2024.03.03           | 코틀린으로 JWT를 발급합니다.                        |
