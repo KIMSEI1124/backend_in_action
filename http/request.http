@@ -1,0 +1,23 @@
+###
+POST http://localhost:8080/member/v1/signup
+Content-Type: application/json
+
+{
+  "email": "workju1124@gmail.com",
+  "password": "qwer1234",
+  "name": "김세이"
+}
+
+###
+POST http://localhost:8080/auth/v1/sign-in
+Content-Type: application/json
+
+{
+  "email": "workju1124@gmail.com",
+  "password": "qwer1234"
+}
+
+### 로그아웃 요청 -> 위에서 signIn 해서 얻은 accessToken을 30초 안에 전송해야합니다.
+DELETE http://localhost:8080/auth/v1/logout
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ3b3JranUxMTI0QGdtYWlsLmNvbSIsIm1lbWJlcklkIjoxLCJleHAiOjE3MDk0NjU5OTV9.__aNVjAyiGnueXPJO9oF62ifSJjNaQFB5BbytLSs2xZiJgXnixtaVtHArWJYfBBclaqSWeJT_QM1v0ZXP17mXw
+

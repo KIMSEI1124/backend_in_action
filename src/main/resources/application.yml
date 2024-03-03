@@ -1,9 +1,17 @@
 spring:
-  config:
-    activate:
-      on-profile: local
+  profiles:
+    default: local
   data:
     redis:
       port: 6379
+      host: localhost
   jpa:
+    hibernate:
+      ddl-auto: create
     open-in-view: false
+    show-sql: true
+
+jwt:
+  secret: 7JWI64WV7ZWY7IS47JqULiDsvZTti4DrprDsnLzroZwg7KeE7ZaJ7ZWY64qUIEpXVCDrsJzquIkg7JiI7KCcIOy9lOuTnCDsnoXri4jri6QuIOyemCDrtoDtg4Hrk5zrpr3ri4jri6Qu
+  access-token-expire-time: 30
+  refresh-token-expire-time: 60
