@@ -11,7 +11,7 @@
 - Spring Data JPA
 - Spring Data Redis
 - [Embedded Redis Server](https://github.com/codemonstur/embedded-redis)
-- jjwt
+- jjwt 0.12.5
     - [api](https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-api/0.12.5)
     - [impl](https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-impl/0.12.5)
     - [jackson](https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-jackson/0.12.5)
@@ -28,3 +28,5 @@
 ```shell
 sh kill.sh
 ```
+
+##  

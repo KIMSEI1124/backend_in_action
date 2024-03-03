@@ -2,10 +2,10 @@ package com.seikim.kotlinjwt.auth.utils
 
 import com.seikim.kotlinjwt.auth.exception.AuthErrorCode
 import com.seikim.kotlinjwt.auth.exception.AuthException
+import com.seikim.kotlinjwt.auth.properties.JwtProperties
 import com.seikim.kotlinjwt.member.domain.Member
 import io.jsonwebtoken.*
 import io.jsonwebtoken.io.Decoders
-import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Component
 import java.util.*
 import javax.crypto.SecretKey
@@ -13,12 +13,10 @@ import javax.crypto.spec.SecretKeySpec
 
 @Component
 class TokenProvider(
-    @Value("\${jwt.secret}") private val jwtSecret: String,
-    @Value("\${jwt.access-token-expire-time}") private val accessTokenExpireTime: Long,
-    @Value("\${jwt.refresh-token-expire-time}") private val refreshTokenExpireTime: Long
+    private val jwtProperties: JwtProperties
 ) {
     private val key: SecretKey by lazy {
-        val keyBytes = Decoders.BASE64.decode(jwtSecret)
+        val keyBytes = Decoders.BASE64.decode(jwtProperties.secret)
         SecretKeySpec(
             keyBytes,
             Jwts.SIG.HS512.key().build().algorithm
@@ -32,27 +30,35 @@ class TokenProvider(
     fun generateAccessToken(member: Member): String {
         val now: Long = Date().time
 
-        val accessToken: String = Jwts.builder()
-            .subject(member.email)
-            .claim("memberId", member.id)
-            .signWith(key)
-            .expiration(Date(now + (1000L * 60 * accessTokenExpireTime)))
-            .compact()
+        val accessToken: String = generateToken(
+            member,
+            now,
+            expireTime = jwtProperties.accessTokenExpireTime
+        )
 
-        return "$BEARER_TYPE $accessToken"
+        return accessToken
     }
 
     fun generateRefreshToken(member: Member): String {
         val now: Long = Date().time
 
-        val refreshToken: String = Jwts.builder()
+        val refreshToken: String = generateToken(
+            member,
+            now,
+            expireTime = jwtProperties.refreshTokenExpireTime
+        )
+
+        return refreshToken
+    }
+
+    private fun generateToken(member: Member, now: Long, expireTime: Long): String {
+        val token: String = Jwts.builder()
             .subject(member.email)
             .claim("memberId", member.id)
             .signWith(key)
-            .expiration(Date(now + (1000L * 60 * refreshTokenExpireTime)))
+            .expiration(Date(now + (1000L * 60 * expireTime)))
             .compact()
-
-        return "$BEARER_TYPE $refreshToken"
+        return "$BEARER_TYPE $token"
     }
 
     fun parseToken(token: String): Int {
@@ -72,7 +78,7 @@ class TokenProvider(
         }
     }
 
-    fun validateBearer(token: String) {
+    private fun validateBearer(token: String) {
         if (token.contains(BEARER_TYPE)) {
             return
         }

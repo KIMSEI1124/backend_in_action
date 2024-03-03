@@ -5,6 +5,7 @@ import com.seikim.kotlinjwt.auth.data.response.SignInResponse
 import com.seikim.kotlinjwt.auth.domain.AuthToken
 import com.seikim.kotlinjwt.auth.domain.AuthTokenRepository
 import com.seikim.kotlinjwt.auth.utils.TokenProvider
+import com.seikim.kotlinjwt.member.domain.Member
 import com.seikim.kotlinjwt.member.domain.MemberRepository
 import com.seikim.kotlinjwt.member.utils.MemberServiceUtils
 import org.springframework.stereotype.Service
@@ -18,10 +19,10 @@ class AuthService(
     val tokenProvider: TokenProvider
 ) {
     fun signIn(request: SignInRequest): SignInResponse {
-        val findMember = MemberServiceUtils.findByEmail(memberRepository, request.email)
+        val findMember: Member = MemberServiceUtils.findByEmail(memberRepository, request.email)
 
-        val accessToken = tokenProvider.generateAccessToken(findMember)
-        val refreshToken = tokenProvider.generateRefreshToken(findMember)
+        val accessToken: String = tokenProvider.generateAccessToken(findMember)
+        val refreshToken: String = tokenProvider.generateRefreshToken(findMember)
         authTokenRepository.save(
             AuthToken(
                 memberId = findMember.id,
