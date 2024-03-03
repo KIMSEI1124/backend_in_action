@@ -28,5 +28,3 @@
 ```shell
 sh kill.sh
 ```
-
-##  
