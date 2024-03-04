@@ -1,0 +1,11 @@
+server:
+  port: 8000
+
+spring:
+  config:
+    import:
+      - application-eureka.yml
+      - application-route-auth.yml
+  #      - application-route-member.yml
+  application:
+    name: api-gateway
