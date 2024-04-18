@@ -6,6 +6,12 @@ Backend 공부 관련 코드들을 기록합니다.
 
 > java/springboot/passport
 
+## Java
+
+| Title     | Date | Description              | 
+|:----------|:-----|:-------------------------|
+| [SOLID]() | todo | `Java`로 Solid 원칙을 정리합니다. |
+
 ## Java / Spring Boot
 
 | Title                                                                                                     | Date                    | Description                                                      |
