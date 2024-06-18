@@ -30,11 +30,3 @@ Backend 공부 관련 코드들을 기록합니다.
 |:---------------------------------------------------------------------------------------------------|:---------------------|:-----------------------------------------|
 | [Starter](https://github.com/KIMSEI1124/backend_in_action/tree/kotlin/springboot/starter)          | 2024.03.01 - Forever | 코틀린을 공부하면서 처음 본 내용과 자바와 다른 점에 대해서 정리합니다. |
 | [Jwt Provider](https://github.com/KIMSEI1124/backend_in_action/tree/kotlin/springboot/jwtprovider) | 2024.03.03           | 코틀린으로 JWT를 발급합니다.                        |
-
-## Typescript / Nest.js
-
-| Title                                                                                         | Date                    | Description                                               |
-|:----------------------------------------------------------------------------------------------|:------------------------|:----------------------------------------------------------|
-| [Starter](https://github.com/KIMSEI1124/backend_in_action/tree/ts/nestjs/starter)             | 2024.06.05 - 2024.06.05 | NestJS를 시작하면서 특징을 확인해봅니다.                                 |
-| [3 Layer Architecture](https://github.com/KIMSEI1124/backend_in_action/tree/ts/nestjs/3layer) | 2024.06.06 - 2024.06.18 | NestJS를 사용하여 3 Layer Architecture 를 만들어보며 필요한 내용들을 정리합니다. |
-| [Custom Logging]()                                                                            | 2024.06.19 -            | 로그를 작성할 때 커스텀하는 법을 알아봅니다.                                 |
