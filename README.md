@@ -33,8 +33,10 @@ Backend 공부 관련 코드들을 기록합니다.
 
 ## Typescript / Nest.js
 
-| Title                                                                                         | Date                    | Description                                               |
-|:----------------------------------------------------------------------------------------------|:------------------------|:----------------------------------------------------------|
-| [Starter](https://github.com/KIMSEI1124/backend_in_action/tree/ts/nestjs/starter)             | 2024.06.05 - 2024.06.05 | NestJS를 시작하면서 특징을 확인해봅니다.                                 |
-| [3 Layer Architecture](https://github.com/KIMSEI1124/backend_in_action/tree/ts/nestjs/3layer) | 2024.06.06 - 2024.06.18 | NestJS를 사용하여 3 Layer Architecture 를 만들어보며 필요한 내용들을 정리합니다. |
-| [Custom Logging]()                                                                            | 2024.06.19 -            | 로그를 작성할 때 커스텀하는 법을 알아봅니다.                                 |
+| Title                                                                                          | Date                    | Description                                               |
+|:-----------------------------------------------------------------------------------------------|:------------------------|:----------------------------------------------------------|
+| [Starter](https://github.com/KIMSEI1124/backend_in_action/tree/ts/nestjs/starter)              | 2024.06.05 - 2024.06.05 | NestJS를 시작하면서 특징을 확인해봅니다.                                 |
+| [3 Layer Architecture](https://github.com/KIMSEI1124/backend_in_action/tree/ts/nestjs/3layer)  | 2024.06.06 - 2024.06.18 | NestJS를 사용하여 3 Layer Architecture 를 만들어보며 필요한 내용들을 정리합니다. |
+| [Custom Logging](https://github.com/KIMSEI1124/backend_in_action/tree/ts/nestjs/customlogging) | 2024.06.19 - 2024.06.19 | 로그를 작성할 때 커스텀하는 법을 알아봅니다.                                 |
+| [Password Encoding]()                                                                          | todo                    | 비밀번호를 저장할 때 암호화 하는법에 대해서 알아봅니다.                           |
+| [HealthChecks (Terminus)]()                                                                    | todo                    | NestJS에서 제공하는 Healthchecks (Terminus)를 알아봅니다.             |
