@@ -73,9 +73,7 @@ export class LogRepository extends Repository<Log> {
 
 ```ts
 @CreateDateColumn()
-time
-:
-Date;
+time: Date;
 ```
 
 Date인 경우에는 위와 같이 `@CreateDateColumn()`를 사용하여 생성되는 시간을 설정할 수 있습니다. 동일하게 업데이트 되는 시간도 가능합니다.
