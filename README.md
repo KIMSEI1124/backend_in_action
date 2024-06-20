@@ -21,8 +21,8 @@
 데이터베이스에 로그를 저장하기 위해 엔티티를 먼저 만들어보겠습니다.
 
 ```ts
-import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
-import {LogDomain, LogLevel, LogType} from "./log.type";
+import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { LogDomain, LogLevel, LogType }           from "./log.type";
 
 @Entity()
 export class Log {
@@ -41,7 +41,7 @@ export class Log {
     @Column()
     type: LogType
 
-    @Column({nullable: true})
+    @Column({ nullable: true })
     domain: LogDomain
 
     constructor(message: string, level: LogLevel, type: LogType, domain: LogDomain) {
@@ -58,9 +58,9 @@ export class Log {
 그 외에 데이터베이스에서 값을 조회할 때 사용하기 위한 로그 레벨, 타입, 도메인과 같은 정보도 포함하였습니다.
 
 ```ts
-import {Injectable} from "@nestjs/common";
-import {Repository} from "typeorm";
-import {Log} from "./log.entity";
+import { Injectable } from "@nestjs/common";
+import { Repository } from "typeorm";
+import { Log }        from "./log.entity";
 
 @Injectable()
 export class LogRepository extends Repository<Log> {
@@ -69,15 +69,26 @@ export class LogRepository extends Repository<Log> {
 
 위와 같이 `Repository`를 등록합니다.
 
+> 2024.06.20 수정
+
+```ts
+@CreateDateColumn()
+time
+:
+Date;
+```
+
+Date인 경우에는 위와 같이 `@CreateDateColumn()`를 사용하여 생성되는 시간을 설정할 수 있습니다. 동일하게 업데이트 되는 시간도 가능합니다.
+
 ### 2.2. Service
 
 이번에는 `CustomLogger`을 만들어보도록 하겠습니다.
 
 ```ts
-import {ConsoleLogger, Injectable} from "@nestjs/common";
-import {LogRepository} from "./log.repository";
-import {Log} from "./log.entity";
-import {InjectRepository} from "@nestjs/typeorm";
+import { ConsoleLogger, Injectable } from "@nestjs/common";
+import { LogRepository }             from "./log.repository";
+import { Log }                       from "./log.entity";
+import { InjectRepository }          from "@nestjs/typeorm";
 
 @Injectable()
 export class CustomLogger extends ConsoleLogger {
@@ -125,9 +136,9 @@ export class CustomLogger extends ConsoleLogger {
 먼저 `main.ts`에서 서버가 실행되고 종료될 때 로그를 남기기 위해 `bootstrap()`안에서 로직을 작성합니다.
 
 ```ts
-import {NestFactory} from '@nestjs/core';
-import {AppModule} from './app.module';
-import {CustomLogger} from "./global/log/logger.service";
+import { NestFactory }  from '@nestjs/core';
+import { AppModule }    from './app.module';
+import { CustomLogger } from "./global/log/logger.service";
 
 const port: number = 3000;
 

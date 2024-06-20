@@ -8,3 +8,4 @@ services:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: 1234
       POSTGRES_DB: postgres
+      TZ: Asia/Seoul
