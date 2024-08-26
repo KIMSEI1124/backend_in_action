@@ -1,13 +1,13 @@
-package com.seikim.multi_module;
+package com.seikim.adminapplication;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MultiModuleApplication {
+public class AdminApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MultiModuleApplication.class, args);
+		SpringApplication.run(AdminApplication.class, args);
 	}
 
 }

@@ -1,10 +1,10 @@
-package com.seikim.multi_module;
+package com.seikim.adminapplication;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MultiModuleApplicationTests {
+class AdminApplicationTests {
 
 	@Test
 	void contextLoads() {
